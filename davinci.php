@@ -3,13 +3,13 @@
 include_once("keys/apikey.php");
 
 try {
-    $prompt = "São se sagra campeão da Copa do Brasil, salve tricolor!";
-    
-    // Cria textos aleatorios de acordo como prompt enviado 
+    $entrada = "São Paulo se sagra campeão da Copa do Brasil, salve tricolor!";
+
+    // Da Vinci - Cria textos aleatorios de acordo como prompt enviado 
     $url = 'https://api.openai.com/v1/engines/davinci/completions';
 
     $data = [
-        'prompt' => $prompt,
+        'prompt' => $entrada,
         'max_tokens' => 150,
     ];
 
@@ -22,15 +22,15 @@ try {
         'Authorization: Bearer ' . $apiKey,
     ]);
 
-    echo ("Calma! Da Vinci está gerando seu texto artístico aleatório...<br><br>");
+    echo ("Da Vinci está gerando seu texto artístico aleatório...<br><br>");
 
     $response = curl_exec($api);
     curl_close($api);
     $result = json_decode($response, true);
 
     if (isset($result['choices'][0]['text'])) {
-        $retorno = $result['choices'][0]['text'];
-        echo ($retorno . "<br>");
+        $resposta = $result['choices'][0]['text'];
+        echo ($resposta . "<br>");
     } else {
         echo ("Não foi possível gerar o texto!" . "<br>");
     }

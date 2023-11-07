@@ -4,5 +4,5 @@
 Estudos de AI, projeto utilizando as seguintes tecnologias:
 * Open AI APIs 
 * PHP
-* Laravel
+* Json
 * O arquivo protegido apikey.php contém apenas uma váriavel com a key pessoal gerada na Open AI
