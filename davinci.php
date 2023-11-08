@@ -46,7 +46,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             'Authorization: Bearer ' . $apiKey,
         ]);
 
-        echo ("Da Vinci está gerando seu texto artístico aleatório...<br><br>");
+        echo ($entrada . "<br>");
+        echo ("OpenAI - Da Vinci gerando seu texto artístico aleatório...<br><br>");        
 
         $response = curl_exec($api);
         if ($response === false) {

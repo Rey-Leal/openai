@@ -60,7 +60,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             "Authorization: Bearer $apiKey"
         ));
 
-        echo ("ChatGPT está processando sua resposta...<br><br>");
+        echo ($entrada . "<br>");
+        echo ("OpenAI - ChatGPT processando sua resposta...<br><br>");
 
         $response = curl_exec($api);
         if ($response === false) {
