@@ -18,12 +18,6 @@
         <input type="text" id="pergunta" name="pergunta" placeholder="Digite sua pergunta"><br><br>
         <button class="btn-large waves-effect waves-dark light-blue darken-2" type="submit" value="Enviar">Enviar</button>
     </form>
-
-    <?php    
-    if (isset($resposta)) {
-        echo "<strong>Resposta:</strong> " . $resposta . "<br>";
-    }
-    ?>
 </body>
 
 </html>
