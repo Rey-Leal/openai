@@ -1,0 +1,210 @@
+/*-----------------------------------------------------------*/
+/* Geral */
+* {
+  margin: 0px;
+  padding: 0px;
+}
+html,
+body {
+  height: 100%;
+}
+
+/*-----------------------------------------------------------*/
+/* Logo MGF */
+.logoMGF {
+  font-family: MGF;
+  font-size: 60px;
+  margin: -20px;
+}
+.nomeSistema {
+  font-family: Arial;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0px;
+}
+.logoMGFPequeno {
+  font-family: MGF;
+  font-size: 40px;
+  margin-top: -10px;
+  margin-right: 5px;
+  margin-left: 5px;
+  margin-bottom: -35px;
+}
+.nomeSistemaPequeno {
+  font-family: Arial;
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: 0px;
+}
+@font-face {
+  font-family: MGF;
+  src: url(fonts/MGF.ttf);
+}
+
+/*-----------------------------------------------------------*/
+/* Efeitos */
+.zoom:hover {
+  transform: scale(1.05);
+}
+.degrade {
+  background-repeat: no-repeat;
+  background: linear-gradient(
+    -45deg,
+    #ffffff,
+    #beefff,
+    #23a6d5,
+    #0288d1,
+    #0166ff,
+    #015871
+  );
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
+}
+.degradeEscuro {
+  background-repeat: no-repeat;
+  background: linear-gradient(-45deg, #23a6d5, #0288d1, #0166ff, #015871);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+/*-----------------------------------------------------------*/
+/* Loader */
+#loader {
+  animation: girar 1s infinite;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 90px;
+  width: 90px;
+  margin: -45px 0 0 -45px;
+  border: 6px solid #e5e5e5;
+  border-radius: 50%;
+  border-top-color: #0288d1;
+}
+@keyframes girar {
+  to {
+    transform: rotate(1turn);
+  }
+}
+/*-----------------------------------------------------------*/
+/* Mensagens de Alerta */
+#janela-base {
+  position: fixed;
+  margin-left: 50%;
+  margin-top: 10%;
+  top: 0;
+  z-index: 2;
+  transform: translate(-50%);
+  min-width: 200px;
+  max-width: 300px;
+  min-height: 90px;
+  max-height: 400px;
+  box-shadow: 0px 0px 10px 0.2px;
+  border-radius: 5px;
+  visibility: hidden;
+  word-wrap: break-word;
+  opacity: 0;
+  text-align: center;
+  vertical-align: middle;
+}
+.janela-titulo {
+  color: #ffffff;
+  background-color: #0288d1;
+  width: 100%;
+  min-width: 200px;
+  max-width: 300px;
+  min-height: 30px;
+  max-height: 30px;
+  border-radius: 5px 5px 0px 0px;
+  padding: 0px 1px 0px 5px;
+  line-height: 30px;
+  font-weight: 700;
+}
+.janela-corpo {
+  background-color: #ffffff;
+  min-height: 90px;
+  max-height: 400px;
+  width: 296px;
+  border-radius: 0px 0px 5px 5px;
+  padding: 0px 5px 3px 5px;
+}
+#corpo {
+  width: 100%;
+}
+#janela-base.visivel {
+  visibility: visible;
+  animation: fadeInOut 10s;
+}
+#janela-base.fechar {
+  visibility: hidden;
+}
+@keyframes fadeInOut {
+  5%,
+  95% {
+    opacity: 1;
+    top: 50px;
+  }
+  15%,
+  85% {
+    opacity: 1;
+    top: 30px;
+  }
+}
+#btn-fechar {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+}
+/*-----------------------------------------------------------*/
+/* Graficos de Barra Horizontal */
+#graficoHorizontal {
+  height: 110px;
+  font-size: 12px;
+  font-style: italic;
+}
+#horizontal {
+  width: 90%;
+  height: 30px;
+  float: left;
+  margin: 3px;
+}
+.barraVermelha,
+.barraAzul,
+.barraLaranja,
+.barraVerde,
+.barraCinza {
+  color: #fff;
+  padding-left: 10px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 3px;
+  box-shadow: 1px 1px 2px #aaaaaa;
+}
+.barraVermelha {
+  background-color: #ef9a9a;
+}
+.barraAzul {
+  background-color: #90caf9;
+}
+.barraLaranja {
+  background-color: #ff9955;
+}
+.barraVerde {
+  background-color: #a5d6a7;
+}
+.barraCinza {
+  background-color: #aaaaaa;
+}
+/*-----------------------------------------------------------*/

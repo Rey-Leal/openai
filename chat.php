@@ -1,5 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>OpenAI - ChatGPT</title>
+    <?php include_once('head.php'); ?>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-wrapper light-blue darken-2 white-text">
+            <img src="content/images/icone.ico" width="65" height="65" />
+            <p class="brand-logo">OpenAI - ChatGPT</p>
+        </div>
+    </nav>
+
+    <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+        <input type="text" id="pergunta" name="pergunta" placeholder="Digite sua pergunta"><br><br>
+        <button class="btn-large waves-effect waves-dark light-blue darken-2" type="submit" value="Enviar">Enviar</button>
+    </form>
+
+    <?php
+    if (isset($resposta)) {
+        echo "<strong>Resposta:</strong> " . $resposta . "<br>";
+    }
+    ?>
+</body>
+
+</html>
+
 <?php
-// Chave privada e pessoal de acesso a API
 include_once("keys/apikey.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -62,29 +91,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OpenAI - ChatGPT</title>
-</head>
-
-<body>
-    <h2>OpenAI - ChatGPT</h2>
-    <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">        
-        <input type="text" id="pergunta" name="pergunta" placeholder="Digite sua pergunta"><br><br>
-        <input type="submit" value="Enviar">
-    </form>
-
-    <?php
-    // Exibir a resposta aqui após o processamento
-    if (isset($resposta)) {
-        echo "<strong>Resposta:</strong> " . $resposta . "<br>";
-    }
-    ?>
-</body>
-
-</html>

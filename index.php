@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>OpenAI - Da Vinci</title>
+    <title>OpenAI</title>
     <?php include_once('head.php'); ?>
 </head>
 
@@ -10,20 +10,12 @@
     <nav>
         <div class="nav-wrapper light-blue darken-2 white-text">
             <img src="content/images/icone.ico" width="65" height="65" />
-            <p class="brand-logo">OpenAI - Da Vinci</p>
+            <p class="brand-logo">OpenAI</p>
         </div>
     </nav>
-
-    <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-        <input type="text" id="pergunta" name="pergunta" placeholder="Digite sua pergunta"><br><br>
-        <button class="btn-large waves-effect waves-dark light-blue darken-2" type="submit" value="Enviar">Enviar</button>
-    </form>
-
-    <?php    
-    if (isset($resposta)) {
-        echo "<strong>Resposta:</strong> " . $resposta . "<br>";
-    }
-    ?>
+    <br>
+    <a class="btn-large waves-effect waves-dark light-blue darken-2" href="chat.php">ChatGPT - Respostas de perguntas</a>
+    <a class="btn-large waves-effect waves-dark light-blue darken-2" href="davinci.php">Da Vinci - Gerador de textos aleatórios</a>
 </body>
 
 </html>
