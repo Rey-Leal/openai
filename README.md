@@ -6,3 +6,7 @@ Estudos de AI, projeto utilizando as seguintes tecnologias:
 * PHP
 * Json
 * O arquivo protegido apikey.php contém apenas uma váriavel com a key pessoal gerada na Open AI
+
+Este projeto tem as seguintes funcionalidades:
+* Respostas de ChatGPT através da OpenAI;
+* Criação de textos aleatórios Da Vinci através da OpenAI;
